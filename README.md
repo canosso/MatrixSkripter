@@ -1,5 +1,6 @@
 MatrixSkripter
 ==============
+![Sample screen](https://github.com/canosso/MatrixSkripter/matrixskripter.png)
 
 <h1><span lang=EN-GB style='mso-ansi-language:EN-GB'>Key features:<o:p></o:p></span></h1>
 
