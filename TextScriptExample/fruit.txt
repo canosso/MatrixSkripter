@@ -1,0 +1,34 @@
+ShwType	RowIdentifier	Text	Delay	SendFrame	ScrollDirection	XCoordinate	YCoordinate	BitmapHeight	BitmapWidth	BitmapData	Transparency	PictureMode	FrontTextColor	BackTextColor	ScrollBlinking
+TextX		What	0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+TextX		kind	0	Send Frame after Bitmap/Text	LEFT | UP	0	9	0	0		BLACK	Normal	ORANGE	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+TextX		of 	0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	GREEN	BLACK	Blink OFF	
+TextX		fruit	0	Send Frame after Bitmap/Text	LEFT | UP	0	9	0	0		BLACK	Normal	MULTICOLOR	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+TextX		do you	0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+TextX		like?	0	Send Frame after Bitmap/Text	LEFT | UP	0	9	0	0		BLACK	Normal	GREEN	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+Bitmap	cherry		0	Send Frame after Bitmap/Text	LEFT | UP	0	0	18	16	00001110000000000:00011110000000000:00113110000000000:01131100000200000:01131100002022200:01311100020222220:01311100022222220:01111000022222220:01113333322222220:01113333322222220:01130000002222220:00300000002222200:03330000020222220:30003300020222220:00000033322222220:00000000002222220:00000000002222200:00000000002222000:	Transparent	Normal	BLACK	BLACK	Blink OFF	
+TextX		che	0	Send Frame after Bitmap/Text	LEFT | UP	16	0	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+TextX		rry	0	Send Frame after Bitmap/Text	LEFT | UP	16	9	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+Bitmap	apricot		0	Send Frame after Bitmap/Text	LEFT | UP	0	0	12	16	00000033333300000:00000333333333000:00003333222233300:00003332222223330:00003322222222330:03003322333322330:00333333333333330:01113333333333330:11113333333333330:11113333333333300:11003333333333000:00000333333330000:	Transparent	Normal	BLACK	BLACK	Blink OFF	
+TextX		apri	0	Send Frame after Bitmap/Text	LEFT | UP	12	0	0	0		BLACK	Normal	ORANGE	BLACK	Blink OFF	
+TextX		cot	0	Send Frame after Bitmap/Text	LEFT | UP	12	9	0	0		BLACK	Normal	ORANGE	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+Bitmap	strawberry		0	Send Frame after Bitmap/Text	LEFT | UP	0	0	11	16	00000020000000000:00002222220000000:00002323222000000:00222222232220000:01223232222222000:00122222322322200:11123222222222220:01222232223232220:10223222322222200:00222322222220000:00022222200000000:	Transparent	Normal	BLACK	BLACK	Blink OFF	
+TextX		straw	0	Send Frame after Bitmap/Text	LEFT | UP	11	0	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+TextX		berry	0	Send Frame after Bitmap/Text	LEFT | UP	11	9	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+Bitmap	tomatoe		0	Send Frame after Bitmap/Text	LEFT | UP	0	0	17	16	00022222222200000:00202222222222000:02022222222222000:22022222222222200:22022222222222200:22222222222222220:22122222222222220:21110000022222220:21110000022222220:22122222222222220:22110000002222220:22122000002222200:21222222222222200:02222222222222000:02222222222220000:00222222222200000:00000222200000000:	Transparent	Normal	BLACK	BLACK	Blink OFF	
+TextX		tom	0	Send Frame after Bitmap/Text	LEFT | UP	15	0	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+TextX		atoe	0	Send Frame after Bitmap/Text	LEFT | UP	15	9	0	0		BLACK	Normal	RED	BLACK	Blink OFF	
+Delay			1000	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		Transparent	Normal	BLACK	BLACK	Blink OFF	
+Clear			0	Send Frame after Bitmap/Text	LEFT | UP	0	0	0	0		BLACK	Normal	BLACK	BLACK	Blink OFF	
+TextScrollX		You decide!	10	Send Frame after Bitmap/Text	LEFT | UP	0	4	0	0		BLACK	Normal	RANDOMCOLOR	BLACK	BLINK	
