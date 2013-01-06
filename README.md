@@ -16,7 +16,7 @@ stored in strings for faster communication<o:p></o:p></p>
 <p>Use any
 text as bitmap with any font with any attribute for the matrix<o:p></o:p></p>
 
-<p>Use any language char for text instead of only ![Ascii 0-128 chars](http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters),  i.e. the whole ![UTF-8 chars](http://en.wikipedia.org/wiki/UTF-8#Examples) could be used
+<p>Use any language char for text instead of only Ascii 0-128 chars, http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters,  i.e. that all UTF-8 chars, http://en.wikipedia.org/wiki/UTF-8#Examples could be used
 <o:p></o:p></p>
 
 <p>Use all
