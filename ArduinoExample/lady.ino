@@ -280,137 +280,57 @@ void ht1632_clearfillcolor(int matrixtype, int typeofsplit, int dir, int sendmat
 */
 
 
-char cherrystring_0[] PROGMEM = "00001110000000000";
-char cherrystring_1[] PROGMEM = "00011110000000000";
-char cherrystring_2[] PROGMEM = "00113110000000000";
-char cherrystring_3[] PROGMEM = "01131100000200000";
-char cherrystring_4[] PROGMEM = "01131100002022200";
-char cherrystring_5[] PROGMEM = "01311100020222220";
-char cherrystring_6[] PROGMEM = "01311100022222220";
-char cherrystring_7[] PROGMEM = "01111000022222220";
-char cherrystring_8[] PROGMEM = "01113333322222220";
-char cherrystring_9[] PROGMEM = "01113333322222220";
-char cherrystring_10[] PROGMEM = "01130000002222220";
-char cherrystring_11[] PROGMEM = "00300000002222200";
-char cherrystring_12[] PROGMEM = "03330000020222220";
-char cherrystring_13[] PROGMEM = "30003300020222220";
-char cherrystring_14[] PROGMEM = "00000033322222220";
-char cherrystring_15[] PROGMEM = "00000000002222220";
-char cherrystring_16[] PROGMEM = "00000000002222200";
-char cherrystring_17[] PROGMEM = "00000000002222000";
+char Webdings52string_0[] PROGMEM = "000000000000000001111111111111111100000000000001000000000000000000000000";
+char Webdings52string_1[] PROGMEM = "000000000000000111111111111111111110000000001111000000000000000000000000";
+char Webdings52string_2[] PROGMEM = "000000000000001111111111111111111110000000111111000000000000000000000000";
+char Webdings52string_3[] PROGMEM = "000000000000011111111111111111111110000111111111000000000000000000000000";
+char Webdings52string_4[] PROGMEM = "000000000000011111111111111111111000011111111111000000000000000000000000";
+char Webdings52string_5[] PROGMEM = "000000000000011111100000000000000011111111111111000000000000000000000000";
+char Webdings52string_6[] PROGMEM = "000000000000011111111111111111111111111111111111111111111111111111111110";
+char Webdings52string_7[] PROGMEM = "000011110000011111111111111111111111111111111111111111111111111111111111";
+char Webdings52string_8[] PROGMEM = "001111111100011111111111111111111111111111111111111111111111111111111111";
+char Webdings52string_9[] PROGMEM = "011111111110011111111111111111111111111111111111111111111111111111111111";
+char Webdings52string_10[] PROGMEM = "111111111111011111111111111111111111111111111111111111111111111111111110";
+char Webdings52string_11[] PROGMEM = "111111111111011111111111111111111111111111111111000000000000000000000000";
+char Webdings52string_12[] PROGMEM = "111111111111011111111111111111111111111111111111000000000000000000000000";
+char Webdings52string_13[] PROGMEM = "111111111111011111111111111111111111111111111111111111111111111111111110";
+char Webdings52string_14[] PROGMEM = "011111111110011111111111111111111111111111111111111111111111111111111111";
+char Webdings52string_15[] PROGMEM = "001111111100011111111111111111111111111111111111111111111111111111111111";
+char Webdings52string_16[] PROGMEM = "000011110000011111111111111111111111111111111111111111111111111111111111";
+char Webdings52string_17[] PROGMEM = "000000000000011111111111111111111111111111111111111111111111111111111110";
+char Webdings52string_18[] PROGMEM = "000000000000011111100000000000000011111111111111000000000000000000000000";
+char Webdings52string_19[] PROGMEM = "000000000000011111100000000000000000111111111111000000000000000000000000";
+char Webdings52string_20[] PROGMEM = "000000000000011111111111111111111110000111111111000000000000000000000000";
+char Webdings52string_21[] PROGMEM = "000000000000001111111111111111111110000001111111000000000000000000000000";
+char Webdings52string_22[] PROGMEM = "000000000000000111111111111111111110000000001111000000000000000000000000";
+char Webdings52string_23[] PROGMEM = "000000000000000011111111111111111100000000000001000000000000000000000000";
 
-char apricotstring_0[] PROGMEM = "00000033333300000";
-char apricotstring_1[] PROGMEM = "00000333333333000";
-char apricotstring_2[] PROGMEM = "00003333222233300";
-char apricotstring_3[] PROGMEM = "00003332222223330";
-char apricotstring_4[] PROGMEM = "00003322222222330";
-char apricotstring_5[] PROGMEM = "03003322333322330";
-char apricotstring_6[] PROGMEM = "00333333333333330";
-char apricotstring_7[] PROGMEM = "01113333333333330";
-char apricotstring_8[] PROGMEM = "11113333333333330";
-char apricotstring_9[] PROGMEM = "11113333333333300";
-char apricotstring_10[] PROGMEM = "11003333333333000";
-char apricotstring_11[] PROGMEM = "00000333333330000";
-
-char strawberrystring_0[] PROGMEM = "00000020000000000";
-char strawberrystring_1[] PROGMEM = "00002222220000000";
-char strawberrystring_2[] PROGMEM = "00002323222000000";
-char strawberrystring_3[] PROGMEM = "00222222232220000";
-char strawberrystring_4[] PROGMEM = "01223232222222000";
-char strawberrystring_5[] PROGMEM = "00122222322322200";
-char strawberrystring_6[] PROGMEM = "11123222222222220";
-char strawberrystring_7[] PROGMEM = "01222232223232220";
-char strawberrystring_8[] PROGMEM = "10223222322222200";
-char strawberrystring_9[] PROGMEM = "00222322222220000";
-char strawberrystring_10[] PROGMEM = "00022222200000000";
-
-char tomatoestring_0[] PROGMEM = "00022222222200000";
-char tomatoestring_1[] PROGMEM = "00202222222222000";
-char tomatoestring_2[] PROGMEM = "02022222222222000";
-char tomatoestring_3[] PROGMEM = "22022222222222200";
-char tomatoestring_4[] PROGMEM = "22022222222222200";
-char tomatoestring_5[] PROGMEM = "22222222222222220";
-char tomatoestring_6[] PROGMEM = "22122222222222220";
-char tomatoestring_7[] PROGMEM = "21110000022222220";
-char tomatoestring_8[] PROGMEM = "21110000022222220";
-char tomatoestring_9[] PROGMEM = "22122222222222220";
-char tomatoestring_10[] PROGMEM = "22110000002222220";
-char tomatoestring_11[] PROGMEM = "22122000002222200";
-char tomatoestring_12[] PROGMEM = "21222222222222200";
-char tomatoestring_13[] PROGMEM = "02222222222222000";
-char tomatoestring_14[] PROGMEM = "02222222222220000";
-char tomatoestring_15[] PROGMEM = "00222222222200000";
-char tomatoestring_16[] PROGMEM = "00000222200000000";
-
-PGM_P cherry[] PROGMEM = 
+PGM_P Webdings52[] PROGMEM = 
 {
-	cherrystring_0,
-	cherrystring_1,
-	cherrystring_2,
-	cherrystring_3,
-	cherrystring_4,
-	cherrystring_5,
-	cherrystring_6,
-	cherrystring_7,
-	cherrystring_8,
-	cherrystring_9,
-	cherrystring_10,
-	cherrystring_11,
-	cherrystring_12,
-	cherrystring_13,
-	cherrystring_14,
-	cherrystring_15,
-	cherrystring_16,
-	cherrystring_17,
-};
-PGM_P apricot[] PROGMEM = 
-{
-	apricotstring_0,
-	apricotstring_1,
-	apricotstring_2,
-	apricotstring_3,
-	apricotstring_4,
-	apricotstring_5,
-	apricotstring_6,
-	apricotstring_7,
-	apricotstring_8,
-	apricotstring_9,
-	apricotstring_10,
-	apricotstring_11,
-};
-PGM_P strawberry[] PROGMEM = 
-{
-	strawberrystring_0,
-	strawberrystring_1,
-	strawberrystring_2,
-	strawberrystring_3,
-	strawberrystring_4,
-	strawberrystring_5,
-	strawberrystring_6,
-	strawberrystring_7,
-	strawberrystring_8,
-	strawberrystring_9,
-	strawberrystring_10,
-};
-PGM_P tomatoe[] PROGMEM = 
-{
-	tomatoestring_0,
-	tomatoestring_1,
-	tomatoestring_2,
-	tomatoestring_3,
-	tomatoestring_4,
-	tomatoestring_5,
-	tomatoestring_6,
-	tomatoestring_7,
-	tomatoestring_8,
-	tomatoestring_9,
-	tomatoestring_10,
-	tomatoestring_11,
-	tomatoestring_12,
-	tomatoestring_13,
-	tomatoestring_14,
-	tomatoestring_15,
-	tomatoestring_16,
+	Webdings52string_0,
+	Webdings52string_1,
+	Webdings52string_2,
+	Webdings52string_3,
+	Webdings52string_4,
+	Webdings52string_5,
+	Webdings52string_6,
+	Webdings52string_7,
+	Webdings52string_8,
+	Webdings52string_9,
+	Webdings52string_10,
+	Webdings52string_11,
+	Webdings52string_12,
+	Webdings52string_13,
+	Webdings52string_14,
+	Webdings52string_15,
+	Webdings52string_16,
+	Webdings52string_17,
+	Webdings52string_18,
+	Webdings52string_19,
+	Webdings52string_20,
+	Webdings52string_21,
+	Webdings52string_22,
+	Webdings52string_23,
 };
 void setup() {
   Serial.begin(115200);
@@ -419,48 +339,10 @@ void setup() {
 void loop() {
  dotmatrix.setfont(FONT_5x7W);
 
- /* ht1632_writetext (x location, y location, string, sendmatrix (0=draw each column, 1= draw the matrix after last column, 2= don't draw now), 
-  * delaytime in milliseconds, direction, frontcolor, backcolor).
+ /* scrollbitmap x/y 4color (x / y location, stringtablename , bitmap width, bitmap height, delaytime in milliseconds, direction,  not or blinking,
+  * textbitmap (0= normal bitmap, 1= textbitmap), if selected the colors black (=backcolor) and green (=frontcolor) could be replaced).
   */
 
- ht1632_writetext(0,0,"What",1,0,0,RED,BLACK);
- ht1632_writetext(0,9,"kind",1,0,0,ORANGE,BLACK);
- delay(1000);
- dotmatrix.clear();
- ht1632_writetext(0,0,"of ",1,0,0,GREEN,BLACK);
- ht1632_writetext(0,9,"fruit",1,0,0,MULTICOLOR,BLACK);
- delay(1000);
- dotmatrix.clear();
- ht1632_writetext(0,0,"do you",1,0,0,RED,BLACK);
- ht1632_writetext(0,9,"like?",1,0,0,GREEN,BLACK);
- delay(1000);
- dotmatrix.clear();
-
- /* ht1632_putbitmap4color( x location, y location, PGM_P * bitmapname, bitmap width, bitmap height,
-  * sendmatrix (0=draw each column, 1= draw the matrix after last column, 2= don't draw now),
-  * transparentblack (0= plot black, 1= Transparent, no black will be plotted),  bitmapmode (0= plot normal, 1= all colors will be black plotted),
-  * textbitmap (0= normal bitmap, 1= textbitmap), if selected the colors black (=backcolor) and green (=frontcolor) could be replaced),
-  * frontcolor (one of the 10 colors), backcolor (one of the 10 colors))
-  */
- ht1632_putbitmap4color(0,0,cherry,18,16,1,Transparent,0,0,0,0);
- ht1632_writetext(16,0,"che",1,0,0,RED,BLACK);
- ht1632_writetext(16,9,"rry",1,0,0,RED,BLACK);
- delay(1000);
- dotmatrix.clear();
- ht1632_putbitmap4color(0,0,apricot,12,16,1,Transparent,0,0,0,0);
- ht1632_writetext(12,0,"apri",1,0,0,ORANGE,BLACK);
- ht1632_writetext(12,9,"cot",1,0,0,ORANGE,BLACK);
- delay(1000);
- dotmatrix.clear();
- ht1632_putbitmap4color(0,0,strawberry,11,16,1,Transparent,0,0,0,0);
- ht1632_writetext(11,0,"straw",1,0,0,RED,BLACK);
- ht1632_writetext(11,9,"berry",1,0,0,RED,BLACK);
- delay(1000);
- dotmatrix.clear();
- ht1632_putbitmap4color(0,0,tomatoe,17,16,1,Transparent,0,0,0,0);
- ht1632_writetext(15,0,"tom",1,0,0,RED,BLACK);
- ht1632_writetext(15,9,"atoe",1,0,0,RED,BLACK);
- delay(1000);
- dotmatrix.clear();
- dotmatrix.hscrolltext(4,"You decide!",RANDOMCOLOR | BLINK,10,1,LEFT,0,BLACK);
+ scrollbitmapx4color(0,Webdings52,24,72,30,LEFT,0,1,RANDOMCOLOR,ORANGE);
+ scrollbitmapy4color(0,Webdings52,24,72,30,UP,0,1,MULTICOLOR,BLACK);
 }

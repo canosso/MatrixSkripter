@@ -1602,7 +1602,7 @@ namespace WindowsFormsApplication1
             }
 
             //firstxpixel = firstxpixel-firstscrollxpixel;
-            lastxpixel = lastxpixel + firstxpixel - 3;
+            lastxpixel = lastxpixel + 1;
             //firstypixel = firstypixel ;
             lastypixel = lastypixel + 1;
             /*if (TextOrientation.SelectedIndex == 1)
@@ -3487,7 +3487,7 @@ namespace WindowsFormsApplication1
                     lastycontrolpixel = allcolorteststring[i].IndexOf("1");
                     break;
                 }
-            }
+            }            
             colorteststring = "";
             for (int heightpixel = 0; heightpixel < TextBitmapTest.Height; heightpixel++)
             {
@@ -3525,8 +3525,10 @@ namespace WindowsFormsApplication1
                     break;
                 }
             }
+            
+            
             colorteststring = "";
-
+            
 
             if (firstxcontrolpixel < firstxpixel && firstycontrolpixel < firstypixel)
             {
@@ -3541,10 +3543,10 @@ namespace WindowsFormsApplication1
 
 
             //firstxpixel = firstxpixel-firstscrollxpixel;
-            lastxpixel = lastxpixel + firstxpixel - 3;
+            lastxpixel = lastxpixel + 1;
             //firstypixel = firstypixel ;
             lastypixel = lastypixel + 1;
-
+            
 
             Rectangle rect = new Rectangle(firstxpixel, firstypixel, (lastxpixel - firstxpixel), (lastypixel - firstypixel));
 
@@ -5011,7 +5013,12 @@ namespace WindowsFormsApplication1
             ArduinoFileText += "}\n\n\n";
 
 
-
+            ArduinoFileText += "/*\n";
+            ArduinoFileText += "* Bitmap Data\n";
+            ArduinoFileText += "* Writes a PROGMEM string for each column, each pixel is a numeric digit\n";
+            ArduinoFileText += "* All strings/columns are saved in a PGM_P string table\n";
+            ArduinoFileText += "* The bitmap will be called with the bitmap name\n";            
+            ArduinoFileText += "*/\n\n\n";
 
 
             ArrayList BMData = new ArrayList();
@@ -5043,7 +5050,7 @@ namespace WindowsFormsApplication1
             foreach (string bmda in BMSingleData)
             {
                 BmdRow = bmda.Split(',');
-                ArduinoFileText += "PGM_P " + BmdRow[0].ToString() + "string_table[] PROGMEM = \n{\n";
+                ArduinoFileText += "PGM_P " + BmdRow[0].ToString() + "[] PROGMEM = \n{\n";
                 for (int x = 0; x < Convert.ToInt16(BmdRow[1]); x++)
                 {
                     ArduinoFileText += "\t" + BmdRow[0].ToString() + "string_" + x + ",\n";
@@ -5090,7 +5097,7 @@ namespace WindowsFormsApplication1
                         bitmapcounter = 1;
                     }
                     string actualrow =
-                        " ht1632_putbitmap4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "string_table," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + SFrame + "," + dataGridView1.Rows[x].Cells[BTransparencyIndex].Value + "," + BMode + ",0,0,0);";
+                        " ht1632_putbitmap4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + SFrame + "," + dataGridView1.Rows[x].Cells[BTransparencyIndex].Value + "," + BMode + ",0,0,0);";
                     ArduinoFileText += actualrow + "\n";
                 }
                 if (dataGridView1.Rows[x].Cells[ShowTypeIndex].Value.ToString() == "BitmapX")
@@ -5108,7 +5115,7 @@ namespace WindowsFormsApplication1
                     }
                     else { SBlink = "0"; }
                     string actualrow =
-                        " scrollbitmapx4color(" + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "string_table," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace(" | UP", "").Replace(" | DOWN", "") + "," + SBlink + ",0,0,0);";
+                        " scrollbitmapx4color(" + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace(" | UP", "").Replace(" | DOWN", "") + "," + SBlink + ",0,0,0);";
 
                     ArduinoFileText += actualrow + "\n";
                 }
@@ -5127,7 +5134,7 @@ namespace WindowsFormsApplication1
                     }
                     else { SBlink = "0"; }
                     string actualrow =
-                        " scrollbitmapy4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "string_table," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace("LEFT | ", "").Replace("RIGHT | ", "") + "," + SBlink + ",0,0,0);";
+                        " scrollbitmapy4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace("LEFT | ", "").Replace("RIGHT | ", "") + "," + SBlink + ",0,0,0);";
                     ArduinoFileText += actualrow + "\n";
                 }
                 if (dataGridView1.Rows[x].Cells[ShowTypeIndex].Value.ToString() == "TextBitmap")
@@ -5142,7 +5149,7 @@ namespace WindowsFormsApplication1
                         bitmapcounter = 1;
                     }
                     string actualrow =
-                                " ht1632_putbitmap4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "string_table," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + SFrame + "," + dataGridView1.Rows[x].Cells[BTransparencyIndex].Value + "," + BMode + ",1," + dataGridView1.Rows[x].Cells[FColorIndex].Value + "," + dataGridView1.Rows[x].Cells[BColorIndex].Value + ");";
+                                " ht1632_putbitmap4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + SFrame + "," + dataGridView1.Rows[x].Cells[BTransparencyIndex].Value + "," + BMode + ",1," + dataGridView1.Rows[x].Cells[FColorIndex].Value + "," + dataGridView1.Rows[x].Cells[BColorIndex].Value + ");";
                     ArduinoFileText += actualrow + "\n";
                 }
                 if (dataGridView1.Rows[x].Cells[ShowTypeIndex].Value.ToString() == "TextBitmapX")
@@ -5160,7 +5167,7 @@ namespace WindowsFormsApplication1
                     }
                     else { SBlink = "0"; }
                     string actualrow =
-                        " scrollbitmapx4color(" + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "string_table," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace(" | UP", "").Replace(" | DOWN", "") + "," + SBlink + ",1," + dataGridView1.Rows[x].Cells[FColorIndex].Value + "," + dataGridView1.Rows[x].Cells[BColorIndex].Value + ");";
+                        " scrollbitmapx4color(" + dataGridView1.Rows[x].Cells[YCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace(" | UP", "").Replace(" | DOWN", "") + "," + SBlink + ",1," + dataGridView1.Rows[x].Cells[FColorIndex].Value + "," + dataGridView1.Rows[x].Cells[BColorIndex].Value + ");";
 
                     ArduinoFileText += actualrow + "\n";
                 }
@@ -5179,7 +5186,7 @@ namespace WindowsFormsApplication1
                     }
                     else { SBlink = "0"; }
                     string actualrow =
-                        " scrollbitmapy4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "string_table," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace("LEFT | ", "").Replace("RIGHT | ", "") + "," + SBlink + ",1," + dataGridView1.Rows[x].Cells[FColorIndex].Value + "," + dataGridView1.Rows[x].Cells[BColorIndex].Value + ");";
+                        " scrollbitmapy4color(" + dataGridView1.Rows[x].Cells[XCoordIndex].Value + "," + dataGridView1.Rows[x].Cells[BitNameIndex].Value + "," + dataGridView1.Rows[x].Cells[BitWidthIndex].Value + "," + dataGridView1.Rows[x].Cells[BitHeightIndex].Value + "," + dataGridView1.Rows[x].Cells[TimDelayIndex].Value + "," + dataGridView1.Rows[x].Cells[SDirectionIndex].Value.ToString().Replace("LEFT | ", "").Replace("RIGHT | ", "") + "," + SBlink + ",1," + dataGridView1.Rows[x].Cells[FColorIndex].Value + "," + dataGridView1.Rows[x].Cells[BColorIndex].Value + ");";
                     ArduinoFileText += actualrow + "\n";
                 }
                 if (dataGridView1.Rows[x].Cells[ShowTypeIndex].Value.ToString() == "Clear")

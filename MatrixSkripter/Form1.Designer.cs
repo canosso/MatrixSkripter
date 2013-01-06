@@ -540,6 +540,7 @@
             // 
             this.RowIdentifier.HeaderText = "Name of Bitmap or Font";
             this.RowIdentifier.Name = "RowIdentifier";
+            this.RowIdentifier.ReadOnly = true;
             // 
             // TextData
             // 
@@ -551,6 +552,7 @@
             this.TimeDelay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.TimeDelay.HeaderText = "Delay";
             this.TimeDelay.Name = "TimeDelay";
+            this.TimeDelay.ToolTipText = "Delay in Milliseconds";
             this.TimeDelay.Width = 69;
             // 
             // SendFrame
@@ -596,18 +598,21 @@
             // 
             this.BitmapWidth.HeaderText = "Bitmap Width";
             this.BitmapWidth.Name = "BitmapWidth";
+            this.BitmapWidth.ReadOnly = true;
             this.BitmapWidth.Width = 70;
             // 
             // BitmapHeight
             // 
             this.BitmapHeight.HeaderText = "Bitmap Height";
             this.BitmapHeight.Name = "BitmapHeight";
+            this.BitmapHeight.ReadOnly = true;
             this.BitmapHeight.Width = 70;
             // 
             // BitmapData
             // 
             this.BitmapData.HeaderText = "Data of Bitmap";
             this.BitmapData.Name = "BitmapData";
+            this.BitmapData.ReadOnly = true;
             // 
             // Transparency
             // 
@@ -618,7 +623,7 @@
             "Transparent"});
             this.Transparency.Name = "Transparency";
             this.Transparency.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Transparency.ToolTipText = "0 for normal Black, 1 for not plotting Black";
+            this.Transparency.ToolTipText = "BLACK for normal Black, Transparent for not plotting Black";
             this.Transparency.Width = 70;
             // 
             // BitmapMode
@@ -631,7 +636,8 @@
             this.BitmapMode.Name = "BitmapMode";
             this.BitmapMode.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.BitmapMode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BitmapMode.ToolTipText = "0 for normal drawing the Bitmap, 1 for erase all colors except black";
+            this.BitmapMode.ToolTipText = "Normal for normal drawing of the Bitmap, Bitmap Erase for erase all colors except" +
+                " black";
             this.BitmapMode.Width = 70;
             // 
             // FrontTextColor
@@ -651,6 +657,7 @@
             "RANDOMREDORANGEMULTICOLOR"});
             this.FrontTextColor.Name = "FrontTextColor";
             this.FrontTextColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FrontTextColor.ToolTipText = "Front Color for Text as Bitmap and all other functions who use a color";
             this.FrontTextColor.Width = 70;
             // 
             // BackTextColor
@@ -670,6 +677,7 @@
             "RANDOMREDORANGEMULTICOLOR"});
             this.BackTextColor.Name = "BackTextColor";
             this.BackTextColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BackTextColor.ToolTipText = "Background Color for Text as Bitmap and all other functions who use a color";
             this.BackTextColor.Width = 50;
             // 
             // ScrollBlinking
@@ -679,6 +687,7 @@
             "Blink OFF",
             "BLINK"});
             this.ScrollBlinking.Name = "ScrollBlinking";
+            this.ScrollBlinking.ToolTipText = "Blink OFF for not blinking, BLINK for blinking";
             // 
             // tabControl1
             // 
@@ -4048,6 +4057,9 @@
         private System.Windows.Forms.ComboBox BitmapScrollBlinking;
         private System.Windows.Forms.ComboBox TextScrollBlinking;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox TextBitmapScrollBlinking;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShwType;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowIdentifier;
         private System.Windows.Forms.DataGridViewTextBoxColumn TextData;
@@ -4064,9 +4076,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn FrontTextColor;
         private System.Windows.Forms.DataGridViewComboBoxColumn BackTextColor;
         private System.Windows.Forms.DataGridViewComboBoxColumn ScrollBlinking;
-        private System.Windows.Forms.ComboBox TextBitmapScrollBlinking;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
            
     }
 }
