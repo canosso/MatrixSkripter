@@ -1,5 +1,6 @@
 MatrixSkripter
 ==============
+
 ![ScreenShot](https://raw.github.com/canosso/MatrixSkripter/master/matrixskripter.png)
 
 <h1>Key features:<o:p></o:p></h1>
@@ -68,8 +69,7 @@ e.g. where to put the bitmap, is also annoying and takes a lot of time.<o:p></o:
 
 <p><span lang=EN-GB style='mso-ansi-language:
 EN-GB'>Because the PC can't directly address a LED matrix and can't run
-remotely on a simply 9V battery.<span lang=EN-GB
-style='mso-ansi-language:EN-GB'><o:p></o:p></p>
+remotely on a simply 9V battery
 
 <p>Therefore
 you get a tool which use all the bitmap possibilities of a PC, script handling
@@ -154,10 +154,12 @@ and flip, so you don't need to manipulate the bitmap before import.<o:p></o:p></
 
 <h1>Bitmaps and Import Bitmaps<o:p></o:p></h1>
 
+![Bitmap Example](https://raw.github.com/canosso/MatrixSkripter/master/4colors.jpg)<br>
+_Left a bitmap composition with 4 colors and transparent, right only 2 colors and plotting black pixels_ 
+
 <p>Bitmaps are
 similar to PGM, <a
-href="http://en.wikipedia.org/wiki/Portable_graymap#PGM_example"><span
-lang=EN-GB style='mso-ansi-language:EN-GB'>http://en.wikipedia.org/wiki/Portable_graymap#PGM_example</a><span
+href="http://en.wikipedia.org/wiki/Portable_graymap#PGM_example">http://en.wikipedia.org/wiki/Portable_graymap#PGM_example</a><span
 class=GramE>,<span
 lang=EN-GB style='mso-ansi-language:EN-GB'> they are for each pixel one <span
 class=SpellE>color. <o:p></o:p></p>
