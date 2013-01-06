@@ -4,37 +4,35 @@ MatrixSkripter
 
 <h1>Key features:<o:p></o:p></h1>
 
-<p>Import
+* <p>Import
 bitmaps with up to 16 colors, match these colors to the existing 4 colors,
-manipulate the bitmap and show this bitmap on the matrix<o:p></o:p></p>
+manipulate the bitmap and show this bitmap on the matrix
 
-<p>Use all
+* <p>Use all
 possible colors, from 0 to 9,
 for each pixel is one digit, the color information is
-stored in strings for faster communication<o:p></o:p></p>
+stored in strings for faster communication
 
-<p>Use any
-text as bitmap with any font with any attribute for the matrix<o:p></o:p></p>
+* <p>Use any
+text as bitmap with any font with any attribute for the matrix
 
-<p>Use any language char for text instead of only Ascii 0-128 chars, http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters,  i.e. that all UTF-8 chars, http://en.wikipedia.org/wiki/UTF-8#Examples could be used
-<o:p></o:p></p>
+* <p>Use any language char for text instead of only Ascii 0-128 chars, http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters,  i.e. that all UTF-8 chars, http://en.wikipedia.org/wiki/UTF-8#Examples could be used
 
-<p>Use all
+
+* <p>Use all
 possible functions of the Lonewolf ht1632c library, <a
-href="http://code.google.com/p/ht1632c/"><span lang=EN-GB style='mso-ansi-language:
-EN-GB'>http://code.google.com/p/ht1632c/</a><span lang=EN-GB
-style='mso-ansi-language:EN-GB'><o:p></o:p></p>
+href="http://code.google.com/p/ht1632c/">http://code.google.com/p/ht1632c/</a>
 
-<p>Test all
+* <p>Test all
 data before you save it to the script. You can let run the script in background
-over USB or better Ethernet, but it consummates a lot of CPU Power.<o:p></o:p></p>
+over USB or better Ethernet, but it consummates a lot of CPU Power.
 
-<p>Script your
-matrix functions and paste an Arduino sketch into the Arduino IDE<o:p></o:p></p>
+* <p>Script your
+matrix functions and paste an Arduino sketch into the Arduino IDE
 
-<p>Faster
+* <p>Faster
 bitmap drawing, because first the whole matrix will be plotted and then Send
-matrix will be sent. Also only the visible pixel will be plotted.<o:p></o:p></p>
+matrix will be sent. Also only the visible pixel will be plotted.
 
 <p><o:p>&nbsp;</o:p></p>
 
