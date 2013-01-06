@@ -5,7 +5,7 @@ MatrixSkripter
 <h1>Key features:<o:p></o:p></h1>
 
 * <p>Import
-bitmaps with up to 16 colors, match these colors to the existing 4 colors,
+bitmaps with up to 16 colors, match these colors to the existing **4 colors,**
 manipulate the bitmap and show this bitmap on the matrix
 
 * <p>Use all
@@ -113,7 +113,7 @@ position on the different tabs:<o:p></o:p></p>
 of a text file, those are tab separated and only for the Matrix <span
 class=SpellE>Skripter useful<o:p></o:p></p>
 
-<p>Green –
+<p>Green–
 Import either a text file or bitmap for the Matrix Skripter
 also the font select is green <o:p></o:p></p>
 
@@ -329,9 +329,9 @@ content will be appended to the datagridview.<o:p></o:p></p>
 <h1>Copy Script as Arduino
 File to Clipboard<o:p></o:p></h1>
 
-<p>If you still
-have Arduino IDE open but the COM port at Settings closed, you can upload the
-file to your Arduino. Now you will see how fast the Arduino is.<o:p></o:p></p>
+If you still
+have <b>Arduino IDE</b> open but the <b>COM port at Settings closed,</b> you can upload the
+file to your Arduino. Now you will see how fast the Arduino is.
 
 <p><o:p>&nbsp;</o:p></p>
 
