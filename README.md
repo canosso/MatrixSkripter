@@ -244,26 +244,26 @@ most important thing, it is a datagridview, similar
 to a spread sheet. </p>
 
 <p>You can
-change the rows but for bitmap and text bitmap you can't change the bitmap
-data, you have to load them again.</p>
+change the rows but for bitmap and text bitmap you <b>can't change the bitmap color
+data,</b> you have to <b>open the bitmap and add it again.</b></p>
 
 <h1>Types of the Matrix Script</h1>
 
-<p>Bitmap, for
+`Bitmap` for
 scrolling a large X or Y for direction could be added or removed</p>
 
-<p>TextBitmap,
+`TextBitmap`
 for scrolling a large X or Y for direction could be added or removed. You can
 change the colors at Front Color
 and Background color</p>
 
-<p>Text, for
+`Text` for
 show a large X or Y for direction is necessary, for scrolling stands TextScroll and large X or Y for direction</p>
 
-<p>Delay,
+`Delay`
 Delay in Milliseconds</p>
 
-<p>Clear,
+`Clear`
 clear the matrix</p>
 
 <p>All other
