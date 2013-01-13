@@ -102,26 +102,26 @@ you use it.</p>
 buttons/options have the same color and the same
 position on the different tabs:</p>
 
-<p>Beige – Saving
+`Beige` – Saving
 of a text file, those are tab separated and only for the Matrix Skripter useful</p>
 
-<p>Green–
+`Green` – 
 Import either a text file or bitmap for the Matrix Skripter
 also the font select is green </p>
 
-<p>Red – Test
+`Red` – Test
 functions or script with the Arduino board connected</p>
 
-<p>Yellow –
+`Yellow` –
 Add data to the Matrix Script</p>
 
-<p>Blue –
+`Blue` –
 Co-ordinates and delay of a function</p>
 
-<p>White – Select
+`White` – Select
 the behaviour of the function</p>
 
-<p>Grey –
+`Grey` –
 Manipulate the Matrix Script</p>
 
 <p>&nbsp;</p>
