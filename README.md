@@ -3,6 +3,17 @@ MatrixSkripter
 
 ![ScreenShot](https://raw.github.com/canosso/MatrixSkripter/master/matrixskripter.png)
 
+<h1>Important Notice</h1>
+All Videos are made with a single matrix. If you use the original ht1632c library, you will get the pixel wrong addressed.
+I changed at <a
+href="http://code.google.com/p/ht1632c/source/browse/ht1632c.cpp#260">ht1632c.cpp at line 260</a>
+
+> //fb_size = 16 * cs_max; 
+
+> fb_size = 32 * cs_max;
+
+
+
 <h1>Key features:</h1>
 
 * <p>Import
