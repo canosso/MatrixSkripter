@@ -4,10 +4,14 @@ MatrixSkripter
 ![ScreenShot](https://raw.github.com/canosso/MatrixSkripter/master/matrixskripter.png)
 
 <a
-href="http://youtu.be/eUwgF2n9ooM">Fast Car, Example 1, Youtube video</a> 
+href="http://youtu.be/eUwgF2n9ooM">![FastCar](https://raw.github.com/canosso/MatrixSkripter/master/fastcar.png) 
+
+Fast Car, Example 1, Youtube video</a> 
 
 <a
-href="http://youtu.be/NAxbdg8kByU">Fruit, Example 2, source: fruit.ino, Youtube video</a> 
+href="http://youtu.be/NAxbdg8kByU">![Fruit](https://raw.github.com/canosso/MatrixSkripter/master/fruit.png)
+
+Fruit, Example 2, source: fruit.ino, Youtube video</a> 
 
 <a
 href="http://youtu.be/BY9ywoERMgI">Color animation with a Webdings char, Example 3, source: lady.ino, Youtube video</a> 
@@ -17,11 +21,10 @@ href="http://youtu.be/BY9ywoERMgI">Color animation with a Webdings char, Example
 All Videos are made with a single matrix. If you use the original ht1632c library, you will get the pixel wrong addressed.
 I changed at <a
 href="http://code.google.com/p/ht1632c/source/browse/ht1632c.cpp#260">ht1632c.cpp at line 260</a>
-
-> //fb_size = 16 * cs_max; 
-
-> fb_size = 32 * cs_max;
-
+```
+//fb_size = 16 * cs_max; 
+fb_size = 32 * cs_max;
+```
 
 
 <h1>Key features:</h1>
@@ -30,11 +33,11 @@ href="http://code.google.com/p/ht1632c/source/browse/ht1632c.cpp#260">ht1632c.cp
 bitmaps with up to 16 colors, match these colors to the existing **4 colors,**
 manipulate the bitmap and show this bitmap on the matrix
 
-* <p>Use all
-possible colors, from 0 to 9,
-for each pixel is one digit, the color information is
-stored in strings for faster communication
-
+* <p>Use all possible colors, from 0 to 9, for each pixel is one digit, the color information is stored in strings for faster communication, e.g.
+```
+char ferraristring_12[] PROGMEM = "110002223333330003333300000000033333333303333333330303333330";
+char ferraristring_13[] PROGMEM = "110002223333300003330000000000003333333303333333330300333330";
+```
 * <p>Use any
 text as bitmap with any font with any attribute for the matrix
 
@@ -208,6 +211,8 @@ script.</p>
 <p>&nbsp;</p>
 
 <h1>Use Text as Bitmap</h1>
+
+First, I have to excuse, that this function isn't that simple because the font will vary with size. If the font size is larger the text will move more to the middle. The function first converts the whole text to a bitmap and then searches for all corners of the visible pixels (firstx/ypixel,lastx/ypixel) and then a bitmap with only this corners will be drawn and this will be used for the Arduino. So the text as bitmap will be on the top left corner of your matrix and not anywhere like the C# bitmap. Sure this work also for right to to left text, no discrimination anywhere.
 
 <p>For Text as
 Bitmap only two colors will be stored, 0 for
