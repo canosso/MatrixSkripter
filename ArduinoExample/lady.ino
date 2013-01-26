@@ -1,6 +1,6 @@
 #include <ht1632c.h>
-ht1632c dotmatrix = ht1632c(&PORTD,7,6,5,3,GEOM_32x16,1);
-#define Number_of_X_Displays 1
+ht1632c dotmatrix = ht1632c(&PORTD,7,6,5,3,GEOM_32x16,2);
+#define Number_of_X_Displays 2
 #define Number_of_Y_Displays 1
 #define X_MAX (32*Number_of_X_Displays-1)
 #define Y_MAX (16*Number_of_Y_Displays-1)
