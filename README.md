@@ -3,6 +3,16 @@ MatrixSkripter
 
 ![ScreenShot](https://raw.github.com/canosso/MatrixSkripter/master/matrixskripter.png)
 
+<a
+href="http://youtu.be/eUwgF2n9ooM">Fast Car, Example 1, Youtube video</a> 
+
+<a
+href="http://youtu.be/NAxbdg8kByU">Fruit, Example 2, source: fruit.ino, Youtube video</a> 
+
+<a
+href="http://youtu.be/BY9ywoERMgI">Color animation with a Webdings char, Example 3, source: lady.ino, Youtube video</a> 
+
+
 <h1>Important Notice</h1>
 All Videos are made with a single matrix. If you use the original ht1632c library, you will get the pixel wrong addressed.
 I changed at <a
