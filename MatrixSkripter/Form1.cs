@@ -10,6 +10,8 @@
  * except different fonts then the FONT_5x7W
  * because otherwise the sketches   
  * could not be used with an ATmega328 board 
+ * 
+ * License: GNU General Public License (GPL) 3.0, http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
 
