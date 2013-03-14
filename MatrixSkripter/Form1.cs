@@ -79,6 +79,7 @@ namespace WindowsFormsApplication1
             this.TextScrollBlinking.SelectedIndex = 0;
             this.BitmapScrollBlinking.SelectedIndex = 0;
             this.TextBitmapScrollBlinking.SelectedIndex = 0;
+            this.ArduinoPort.SelectedIndex = 3;
         }
 
         /*
@@ -4123,7 +4124,7 @@ namespace WindowsFormsApplication1
             ArduinoTestFileText += "*/\n\n ";
 
             ArduinoTestFileText += "#include <ht1632c.h>\n";
-            ArduinoTestFileText += "ht1632c dotmatrix = ht1632c(&PORTD," + DataText.Text + "," + WR.Text + "," + CLK.Text + "," + CS.Text + ",GEOM_32x16," + numberofdisplays.ToString() + ");\n";
+            ArduinoTestFileText += "ht1632c dotmatrix = ht1632c(&" + ArduinoPort.Text + "," + DataText.Text + "," + WR.Text + "," + CLK.Text + "," + CS.Text + ",GEOM_32x16," + numberofdisplays.ToString() + ");\n";
             ArduinoTestFileText += "#define Number_of_X_Displays " + NumberOfXMatrix.Value.ToString() + "\n";
             ArduinoTestFileText += "#define Number_of_Y_Displays " + NumberOfYMatrix.Value.ToString() + "\n";
             ArduinoTestFileText += "#define X_MAX (32*Number_of_X_Displays-1)" + "\n";
@@ -4417,7 +4418,7 @@ namespace WindowsFormsApplication1
             numberofdisplays = (int)NumberOfXMatrix.Value * (int)NumberOfYMatrix.Value;
             string ArduinoTestFileText = "";
             ArduinoTestFileText += "/*\n";
-            ArduinoTestFileText += "TestMatrixSerial.ino:\n";
+            ArduinoTestFileText += "TestMatrixUDP.ino:\n";
             ArduinoTestFileText += "by Johann Zoehrer\n";
             ArduinoTestFileText += "Based on UDPSendReceive.pde:\n";
             ArduinoTestFileText += " This sketch receives UDP message strings, prints them to the serial port\n";
@@ -4437,7 +4438,7 @@ namespace WindowsFormsApplication1
             ArduinoTestFileText += "#include <Ethernet.h>\n";
             ArduinoTestFileText += "#include <EthernetUdp.h>         // UDP library from: bjoern@cs.stanford.edu 12/30/2008\n";
             ArduinoTestFileText += "#include <ht1632c.h>\n";
-            ArduinoTestFileText += "ht1632c dotmatrix = ht1632c(&PORTD," + DataText.Text + "," + WR.Text + "," + CLK.Text + "," + CS.Text + ",GEOM_32x16," + numberofdisplays.ToString() + ");\n";
+            ArduinoTestFileText += "ht1632c dotmatrix = ht1632c(&"+ ArduinoPort.Text+"," + DataText.Text + "," + WR.Text + "," + CLK.Text + "," + CS.Text + ",GEOM_32x16," + numberofdisplays.ToString() + ");\n";
             ArduinoTestFileText += "#define Number_of_X_Displays " + NumberOfXMatrix.Value.ToString() + "\n";
             ArduinoTestFileText += "#define Number_of_Y_Displays " + NumberOfYMatrix.Value.ToString() + "\n";
             ArduinoTestFileText += "#define X_MAX (32*Number_of_X_Displays-1)" + "\n";
@@ -4739,10 +4740,15 @@ namespace WindowsFormsApplication1
             string[] BmdRow, BmdRowData;
             int numberofdisplays = 1, bitmapcounter = 0, scrollbitmapcounter = 0, writetextcounter = 0;
             string ArduinoFileText = "";
+            ArduinoFileText += "/*\n";            
+            ArduinoFileText += "Based on Lonewolf's ht1632c library, http://code.google.com/p/ht1632c/ \n";
+            ArduinoFileText += "Could be adapted for other devices by changing the library and the plot method\n";
+            ArduinoFileText += "*/\n\n";
+
             ArduinoFileText += "#include <ht1632c.h>\n";
             numberofdisplays = (int)NumberOfXMatrix.Value * (int)NumberOfYMatrix.Value;
 
-            ArduinoFileText += "ht1632c dotmatrix = ht1632c(&PORTD," + DataText.Text + "," + WR.Text + "," + CLK.Text + "," + CS.Text + ",GEOM_32x16," + numberofdisplays.ToString() + ");\n";
+            ArduinoFileText += "ht1632c dotmatrix = ht1632c(&"+ ArduinoPort.Text+"," + DataText.Text + "," + WR.Text + "," + CLK.Text + "," + CS.Text + ",GEOM_32x16," + numberofdisplays.ToString() + ");\n";
             ArduinoFileText += "#define Number_of_X_Displays " + NumberOfXMatrix.Value.ToString() + "\n";
             ArduinoFileText += "#define Number_of_Y_Displays " + NumberOfYMatrix.Value.ToString() + "\n";
             ArduinoFileText += "#define X_MAX (32*Number_of_X_Displays-1)\n";
@@ -5554,14 +5560,14 @@ namespace WindowsFormsApplication1
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
             StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
-            sw.WriteLine("ComPort\tXMatrix\tYMatrix\tData\tWR\tCLK\tCS\tCommon");
+            sw.WriteLine("ComPort\tXMatrix\tYMatrix\tArduinoPort\tData\tWR\tCLK\tCS\tCommon");
             if (SPorts.SelectedIndex == -1)
             {
-                sw.WriteLine(" \t" + NumberOfXMatrix.Value.ToString() + "\t" + NumberOfYMatrix.Value.ToString() + "\t" + DataText.Text + "\t" + WR.Text + "\t" + CLK.Text + "\t" + CS.Text + "\t" + CommonColumsLines.Text);
+                sw.WriteLine(" \t" + NumberOfXMatrix.Value.ToString() + "\t" + NumberOfYMatrix.Value.ToString() + "\t" + ArduinoPort.Text + "\t" + DataText.Text + "\t" + WR.Text + "\t" + CLK.Text + "\t" + CS.Text + "\t" + CommonColumsLines.Text);
             }
             else
             {
-                sw.WriteLine(SPorts.Text + "\t" + NumberOfXMatrix.Value.ToString() + "\t" + NumberOfYMatrix.Value.ToString() + "\t" + DataText.Text + "\t" + WR.Text + "\t" + CLK.Text + "\t" + CS.Text + "\t" + CommonColumsLines.Text);
+                sw.WriteLine(SPorts.Text + "\t" + NumberOfXMatrix.Value.ToString() + "\t" + NumberOfYMatrix.Value.ToString() + "\t" + ArduinoPort.Text + "\t" + DataText.Text + "\t" + WR.Text + "\t" + CLK.Text + "\t" + CS.Text + "\t" + CommonColumsLines.Text);
             }
             sw.Close();
         }
@@ -5595,11 +5601,12 @@ namespace WindowsFormsApplication1
                 SPorts.Text = CSVRowMember[0];
                 NumberOfXMatrix.Value = Convert.ToInt16(CSVRowMember[1]);
                 NumberOfYMatrix.Value = Convert.ToInt16(CSVRowMember[2]);
-                DataText.Text = CSVRowMember[3];
-                WR.Text = CSVRowMember[4];
-                CLK.Text = CSVRowMember[5];
-                CS.Text = CSVRowMember[6];
-                CommonColumsLines.Text = CSVRowMember[7];
+                ArduinoPort.Text = CSVRowMember[3];
+                DataText.Text = CSVRowMember[4];
+                WR.Text = CSVRowMember[5];
+                CLK.Text = CSVRowMember[6];
+                CS.Text = CSVRowMember[7];
+                CommonColumsLines.Text = CSVRowMember[8];
             }
         }
 

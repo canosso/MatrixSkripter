@@ -267,6 +267,8 @@
             this.AddDelayToScript = new System.Windows.Forms.Button();
             this.AddClearToScript = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.ArduinoPort = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
             this.CommonColumsLines = new System.Windows.Forms.TextBox();
             this.SaveSettings = new System.Windows.Forms.Button();
@@ -408,7 +410,7 @@
             this.NumberOfXMatrix.Size = new System.Drawing.Size(33, 22);
             this.NumberOfXMatrix.TabIndex = 19;
             this.NumberOfXMatrix.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -3373,6 +3375,8 @@
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox8.Controls.Add(this.label59);
+            this.groupBox8.Controls.Add(this.ArduinoPort);
             this.groupBox8.Controls.Add(this.label44);
             this.groupBox8.Controls.Add(this.CommonColumsLines);
             this.groupBox8.Controls.Add(this.SaveSettings);
@@ -3398,6 +3402,36 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Settings";
             // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(466, 19);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(26, 13);
+            this.label59.TabIndex = 39;
+            this.label59.Text = "Port";
+            // 
+            // ArduinoPort
+            // 
+            this.ArduinoPort.FormattingEnabled = true;
+            this.ArduinoPort.Items.AddRange(new object[] {
+            "PORTA",
+            "PORTB",
+            "PORTC",
+            "PORTD",
+            "PORTE",
+            "PORTF",
+            "PORTG",
+            "PORTH",
+            "PORTJ",
+            "PORTK",
+            "PORTL"});
+            this.ArduinoPort.Location = new System.Drawing.Point(493, 13);
+            this.ArduinoPort.Name = "ArduinoPort";
+            this.ArduinoPort.Size = new System.Drawing.Size(68, 24);
+            this.ArduinoPort.TabIndex = 38;
+            // 
             // label44
             // 
             this.label44.AutoSize = true;
@@ -3410,7 +3444,7 @@
             // 
             // CommonColumsLines
             // 
-            this.CommonColumsLines.Location = new System.Drawing.Point(633, 36);
+            this.CommonColumsLines.Location = new System.Drawing.Point(632, 36);
             this.CommonColumsLines.Name = "CommonColumsLines";
             this.CommonColumsLines.Size = new System.Drawing.Size(20, 22);
             this.CommonColumsLines.TabIndex = 35;
@@ -3420,9 +3454,9 @@
             // 
             this.SaveSettings.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.SaveSettings.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SaveSettings.Location = new System.Drawing.Point(725, 10);
+            this.SaveSettings.Location = new System.Drawing.Point(744, 10);
             this.SaveSettings.Name = "SaveSettings";
-            this.SaveSettings.Size = new System.Drawing.Size(95, 56);
+            this.SaveSettings.Size = new System.Drawing.Size(85, 56);
             this.SaveSettings.TabIndex = 33;
             this.SaveSettings.Text = "Save Settings";
             this.SaveSettings.UseVisualStyleBackColor = false;
@@ -3432,9 +3466,9 @@
             // 
             this.OpenSettings.BackColor = System.Drawing.Color.Green;
             this.OpenSettings.ForeColor = System.Drawing.SystemColors.Control;
-            this.OpenSettings.Location = new System.Drawing.Point(819, 10);
+            this.OpenSettings.Location = new System.Drawing.Point(832, 10);
             this.OpenSettings.Name = "OpenSettings";
-            this.OpenSettings.Size = new System.Drawing.Size(95, 56);
+            this.OpenSettings.Size = new System.Drawing.Size(85, 56);
             this.OpenSettings.TabIndex = 32;
             this.OpenSettings.Text = "Open Settings";
             this.OpenSettings.UseVisualStyleBackColor = false;
@@ -3442,7 +3476,7 @@
             // 
             // CLK
             // 
-            this.CLK.Location = new System.Drawing.Point(610, 12);
+            this.CLK.Location = new System.Drawing.Point(679, 12);
             this.CLK.Name = "CLK";
             this.CLK.Size = new System.Drawing.Size(20, 22);
             this.CLK.TabIndex = 31;
@@ -3451,15 +3485,16 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(578, 15);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(652, 15);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(34, 17);
+            this.label23.Size = new System.Drawing.Size(27, 13);
             this.label23.TabIndex = 30;
             this.label23.Text = "CLK";
             // 
             // CS
             // 
-            this.CS.Location = new System.Drawing.Point(656, 12);
+            this.CS.Location = new System.Drawing.Point(721, 12);
             this.CS.Name = "CS";
             this.CS.Size = new System.Drawing.Size(20, 22);
             this.CS.TabIndex = 29;
@@ -3468,15 +3503,16 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(631, 15);
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(700, 15);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(26, 17);
+            this.label24.Size = new System.Drawing.Size(21, 13);
             this.label24.TabIndex = 28;
             this.label24.Text = "CS";
             // 
             // DataText
             // 
-            this.DataText.Location = new System.Drawing.Point(507, 12);
+            this.DataText.Location = new System.Drawing.Point(590, 12);
             this.DataText.Name = "DataText";
             this.DataText.Size = new System.Drawing.Size(20, 22);
             this.DataText.TabIndex = 27;
@@ -3485,15 +3521,16 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(467, 15);
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(559, 15);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(38, 17);
+            this.label22.Size = new System.Drawing.Size(30, 13);
             this.label22.TabIndex = 26;
             this.label22.Text = "Data";
             // 
             // WR
             // 
-            this.WR.Location = new System.Drawing.Point(558, 12);
+            this.WR.Location = new System.Drawing.Point(632, 12);
             this.WR.Name = "WR";
             this.WR.Size = new System.Drawing.Size(20, 22);
             this.WR.TabIndex = 25;
@@ -3502,9 +3539,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(527, 15);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(610, 15);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 17);
+            this.label21.Size = new System.Drawing.Size(23, 13);
             this.label21.TabIndex = 24;
             this.label21.Text = "WR";
             // 
@@ -4076,6 +4114,8 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn FrontTextColor;
         private System.Windows.Forms.DataGridViewComboBoxColumn BackTextColor;
         private System.Windows.Forms.DataGridViewComboBoxColumn ScrollBlinking;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.ComboBox ArduinoPort;
            
     }
 }

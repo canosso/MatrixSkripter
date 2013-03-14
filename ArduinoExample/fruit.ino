@@ -1,3 +1,8 @@
+/*
+Based on Lonewolf's ht1632c library, http://code.google.com/p/ht1632c/ 
+Could be adapted for other devices by changing the library and the plot method
+*/
+
 #include <ht1632c.h>
 ht1632c dotmatrix = ht1632c(&PORTD,7,6,5,3,GEOM_32x16,2);
 #define Number_of_X_Displays 2

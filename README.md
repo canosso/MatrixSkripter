@@ -65,8 +65,8 @@ matrix will be sent. Also only the visible pixel will be plotted.
 <h1>What is needed?</h1>
 
 <p>An Arduino
-board with serial communication, best over USB, I didn't get the Mega 2560
-board to run</p>
+board with serial communication, best over USB, for <a
+href="http://arduino.cc/forum/index.php?PHPSESSID=a49f8435471fd16ceffcd8f76d90e59c&topic=50326.msg739037#msg739037">Mega 2560 configuration look at Tjaah post</a></p>
 
 <p>A Sure
 Electronics 32x16 bicolor LED matrix with Holtek ht1632c chip</p>
